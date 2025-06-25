@@ -11,68 +11,6 @@
       background-color: #121212;
       color: #e8d2ae;
     }
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 5%;
-  background-color: #1a1a1a;
-}
-
-.desktop-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.desktop-nav ul li a {
-  text-decoration: none;
-  color: #e8d2ae;
-  font-size: 14px;
-}
-
-.menu-toggle {
-  font-size: 26px;
-  color: #e8d2ae;
-  cursor: pointer;
-  display: none;
-}
-
-.mobile-nav {
-  display: none;
-  background-color: #1a1a1a;
-  padding: 10px 0;
-}
-
-.mobile-nav ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-}
-
-.mobile-nav ul li {
-  padding: 10px 0;
-}
-
-.mobile-nav ul li a {
-  text-decoration: none;
-  color: #e8d2ae;
-  font-size: 16px;
-}
-
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .mobile-nav.show {
-    display: block;
-  }
-}
 
     header {
       padding: 20px 5%;
@@ -128,31 +66,15 @@
 <body>
 
 <header>
-  <div class="header-container">
-    <img src="logo11.png" alt="Darakam Logo" class="logo" />
-    <nav class="desktop-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    <a href="http://wa.me/+23277931814" class="developer-link">Developer</a>
-    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-  </div>
-
-  <nav class="mobile-nav" id="mobileNav">
+  <img src="logo11.png" class="logo" alt="Logo">
+  <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="product.html">Products</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="http://wa.me/+23277931814">WhatsApp</a></li>
     </ul>
   </nav>
 </header>
-
 
 <section>
   <h1>About Darakam Tech Woods</h1>
@@ -169,13 +91,6 @@
 <footer>
   &copy; 2025 Darakam Tech Woods — All Rights Reserved.
 </footer>
-<script>
-  function toggleMenu() {
-    const nav = document.getElementById('mobileNav');
-    nav.classList.toggle('show');
-  }
-</script>
-
 
 </body>
 </html>
