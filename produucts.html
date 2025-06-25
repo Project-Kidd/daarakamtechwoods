@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Products – Darakam Tech Woods</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #121212;
+      color: #e8d2ae;
+      font-family: 'Segoe UI', sans-serif;
+    }.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #1a1a1a;
+}
+
+.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.desktop-nav ul li a {
+  text-decoration: none;
+  color: #e8d2ae;
+  font-size: 14px;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  color: #e8d2ae;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+  background-color: #1a1a1a;
+  padding: 10px 0;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.mobile-nav ul li {
+  padding: 10px 0;
+}
+
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: #e8d2ae;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-nav.show {
+    display: block;
+  }
+}
+
+
+    header {
+      padding: 20px 5%;
+      background-color: #1a1a1a;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      width: 100px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #e8d2ae;
+      font-size: 14px;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 40px 0 20px;
+      color: #e0b97a;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 0 5%;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255,255,255,0.03);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+      color: #fff;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #ccc;
+    }
+
+    footer {
+      margin-top: 60px;
+      background-color: #1a1a1a;
+      text-align: center;
+      padding: 20px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <img src="logo11.png" alt="Darakam Logo" class="logo" />
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <a href="http://wa.me/+23277931814" class="developer-link">Developer</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="http://wa.me/+23277931814">WhatsApp</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+<h1>Our Featured Wood Products</h1>
+
+<div class="products">
+  <div class="card">
+    <img src="product1.jpg" alt="Wood Table" />
+    <h3>Custom Dining Table</h3>
+    <p>Handcrafted modern table with Sierra Leonean timber. Built to last.</p>
+  </div>
+  <div class="card">
+    <img src="product2.jpg" alt="Wood Bed" />
+    <h3>Luxury Wood Bed</h3>
+    <p>King-size futuristic wood design, designed for both comfort and class.</p>
+  </div>
+  <div class="card">
+    <img src="product3.jpg" alt="Shelf" />
+    <h3>Floating Wall Shelves</h3>
+    <p>Minimalist & space-saving — perfect for modern living rooms.</p>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 Darakam Tech Woods — All Rights Reserved.
+</footer>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobileNav');
+    nav.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>

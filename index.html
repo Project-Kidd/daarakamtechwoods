@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Darakam Tech Woods</title>
+  <style>
+    :root {
+      --main-bg: #121212;
+      --accent: #28a745;
+      --highlight: #e0b97a;
+      --wood-text: #e8d2ae;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #1a1a1a;
+}
+
+.desktop-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.desktop-nav ul li a {
+  text-decoration: none;
+  color: #e8d2ae;
+  font-size: 14px;
+}
+
+.menu-toggle {
+  font-size: 26px;
+  color: #e8d2ae;
+  cursor: pointer;
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+  background-color: #1a1a1a;
+  padding: 10px 0;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.mobile-nav ul li {
+  padding: 10px 0;
+}
+
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: #e8d2ae;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-nav.show {
+    display: block;
+  }
+}
+
+    body {
+      background-color: var(--main-bg);
+      color: var(--wood-text);
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #1a1a1a;
+      border-bottom: 1px solid #333;
+    }
+
+    .logo {
+      width: 120px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: var(--wood-text);
+      font-weight: 500;
+      font-size: 14px;
+      transition: 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--highlight);
+    }
+
+    .developer-link {
+      background-color: transparent;
+      border: 1px solid var(--highlight);
+      color: var(--highlight);
+      padding: 8px 16px;
+      border-radius: 25px;
+      font-size: 13px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .developer-link:hover {
+      background-color: var(--highlight);
+      color: #121212;
+    }
+
+    .hero {
+      padding: 60px 5%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      background-image: radial-gradient(circle at top left, rgba(255,255,255,0.05), transparent);
+    }
+
+    .content {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .content h1 {
+      font-size: 2.8rem;
+      line-height: 1.3;
+      color: var(--highlight);
+      margin-bottom: 20px;
+    }
+
+    .content p {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 30px;
+      max-width: 500px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 36px;
+      font-size: 0.95rem;
+      border-radius: 30px;
+      border-top-right-radius: 0;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #1bc7be;
+    }
+
+    .side-info {
+      flex: 1;
+      min-width: 280px;
+      color: #aaa;
+      font-size: 1rem;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.03);
+    }
+
+    footer {
+      background-color: #1a1a1a;
+      color: #666;
+      text-align: center;
+      padding: 16px 0;
+      margin-top: 60px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+      .content h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+ <header>
+  <div class="header-container">
+    <img src="logo11.png" alt="Darakam Logo" class="logo" />
+    <nav class="desktop-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+    <a href="http://wa.me/+23277931814" class="developer-link">Developer</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="product.html">Products</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="http://wa.me/+23277931814">WhatsApp</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <section class="hero">
+    <div class="content">
+      <h1>DARAKAM TECH WOODS</h1>
+      <p>Where craftsmanship meets the future. We blend tradition and technology to build smarter wooden designs for a better lifestyle.</p>
+      <a href="#" class="btn">Explore More</a>
+    </div>
+    <div class="side-info">
+      <p><strong>Latest Note:</strong><br/> This is Wanny and he's here with me — we're doing good and building things that last a lifetime. Wood is life. Craft is art.</p>
+    </div>
+  </section>
+  <div style="text-align:center; padding: 30px 5%; background-color: #1e1e1e;">
+  <h2 style="color:#e0b97a;">Get in Touch</h2>
+  <p style="color:#ccc;">We respond within 24 hours. Choose your contact method:</p>
+  <a href="mailto:darakamwoodworks@gmail.com" 
+     style="margin: 10px; display:inline-block; padding: 12px 24px; background-color:#28a745; color:white; text-decoration:none; border-radius: 25px;">
+    📧 Email Us
+  </a>
+  <a href="https://wa.me/+23277931814" 
+     style="margin: 10px; display:inline-block; padding: 12px 24px; background-color:#25D366; color:white; text-decoration:none; border-radius: 25px;">
+    💬 WhatsApp Chat
+  </a>
+</div>
+  <footer>
+    &copy; 2025 Darakam Tech Woods. All Rights Reserved.
+  </footer>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById('mobileNav');
+    nav.classList.toggle('show');
+  }
+</script>
+
+</body>
+</html>
